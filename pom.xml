@@ -74,18 +74,18 @@
 
 
 
-    <!--<repositories>
+    <repositories>
         <repository>
             <id>myMavenRepo.read</id>
-            <url>https://mymavenrepo.com/repo/FN8PIshHk5uALNhkXbhs/</url>
+	    <url>file:///tmp/</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <repository>
             <id>myMavenRepo.write</id>
-            <url>https://mymavenrepo.com/repo/9Q8JoRpymi4UGK8HzbVq/</url>
+	    <url>file:///tmp/</url>
         </repository>
-    </distributionManagement>-->
+    </distributionManagement>
 
 </project>
