@@ -20,6 +20,12 @@ pipeline {
             }
         }
 
+        stage('Sanity check') {
+            steps {
+                input "Have you done sanity checks?"
+            }
+        }
+        
 
         stage ('Deployment Stage') {
             steps {
