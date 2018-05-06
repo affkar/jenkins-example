@@ -18,7 +18,7 @@
         <connection>scm:git:git@github.com:affkar/jenkins-example.git</connection>
         <developerConnection>scm:git:git@github.com:affkar/jenkins-example.git</developerConnection>
         <url>https://github.com/affkar/jenkins-example</url>
-        <tag>${project.version}</tag>
+        <tag>@{project.version}</tag>
 
     </scm>
     <build>
@@ -49,7 +49,7 @@
                     <goals>pre-integration-test</goals>
                     <preparationGoals />
                     <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
-                    <tagNameFormat>${project.version}</tagNameFormat>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
                     <remoteTagging>true</remoteTagging>
                 </configuration>
             </plugin>
