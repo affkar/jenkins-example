@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    tools {
+      maven : 'currentmvn'
+    }
+    stages {
+        stage ('Compile Stage') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage ('Testing Stage') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Sanity check') {
+            steps {
+                input "Have you done sanity checks?"
+            }
+        }
+        
+
+        stage ('Deployment Stage') {
+            steps {
+                sh 'mvn deploy'
+            }
+        }
+    }
+}
