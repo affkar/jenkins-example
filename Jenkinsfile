@@ -22,7 +22,7 @@ pipeline {
 
         stage('Sanity check') {
             steps {
-                input (message: "Have you done sanity checks?",id: '1', ok:'Go ahead?')
+                input (message: "Have you done sanity checks?",id: '1', ok:'Go ahead?', parameters : 'some parameter abcd')
             }
         }
         
