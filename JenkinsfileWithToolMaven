@@ -1,4 +1,5 @@
 pipeline {
+    //This did not work. It was complaining about the tools section.
     agent any
     tools {
       maven : 'currentmvn'
