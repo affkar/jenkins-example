@@ -20,7 +20,7 @@ pipeline {
             }
         }
         stage('Greet in French'){
-            step{
+            steps{
                 greet (name: 'Karthick', useFrench: true)   
             }
         }
