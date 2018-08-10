@@ -29,6 +29,7 @@ pipeline {
             steps {
                 
                 input (message: "Have you done sanity checks?",id: '1', ok:'Go ahead?', parameters : [[$class: 'TextParameterDefinition',name:'some_parameter_abcd', appName:'my custom app name', description:'my own description', defaultValue:'my own default value']])
+                echo ("some_parameter_abcd: "+userInput['some_parameter_abcd'])
             }
         }
         
