@@ -28,7 +28,10 @@ pipeline {
         stage('Sanity check') {
             steps {
                 
-                input (message: "Have you done sanity checks?",id: 'myinputid', ok:'Go ahead?', parameters : [[$class: 'TextParameterDefinition',name:'some_parameter_abcd', appName:'my custom app name', description:'my own description', defaultValue:'my own default value']])
+                input (message: "Have you done sanity checks?",id: 'myinputid', ok:'Go ahead?', parameters : [
+                    [$class: 'TextParameterDefinition',name:'some_parameter_abcd', appName:'my custom app name', description:'my own description', defaultValue:'abcd'],
+                    [$class: 'TextParameterDefinition',name:'some_parameter_efgh', appName:'my custom app name efgh', description:'my own description efgh', defaultValue:'efgh']                                                                                          
+                                                                                                             ])
                 echo ("some_parameter_abcd: "+myinputid['some_parameter_abcd'])
             }
         }
