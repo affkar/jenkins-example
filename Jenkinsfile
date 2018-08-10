@@ -28,7 +28,7 @@ pipeline {
         stage('Sanity check') {
             steps {
                 
-                input (message: "Have you done sanity checks?",id: '1', ok:'Go ahead?', parameters : ['some parameter abcd'])
+                input (message: "Have you done sanity checks?",id: '1', ok:'Go ahead?', parameters : [new AppDetectorParamaterDefinition(name:'some_parameter_abcd', appName:'my custom app name', description:'my own description', defaultValue:'my own default value')])
             }
         }
         
